@@ -1,5 +1,4 @@
 
-
 // получаем элемент из дерева DOM, и присваиваем его в константу
 const menuBurger = document.querySelector( '.menu-open' );
 
