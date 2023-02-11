@@ -21,4 +21,14 @@ menuClose.addEventListener( 'click', ( event ) => {
 } );
 
 
-const menuClose = document.querySelector( '.close' );
+// Валидация формы
+
+function validate (event){
+    console.log("функция выполнена");
+}
+
+
+const myForm = document.getElementById( 'contactform' );
+
+
+myForm.addEventListener( 'submit', validate);
