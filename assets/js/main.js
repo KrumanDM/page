@@ -19,3 +19,6 @@ menuClose.addEventListener( 'click', ( event ) => {
 	document.body.classList.remove( 'is-menu-visible' );
 
 } );
+
+
+const menuClose = document.querySelector( '.close' );
