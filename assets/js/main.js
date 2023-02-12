@@ -21,6 +21,7 @@ menuClose.addEventListener( 'click', ( event ) => {
 } );
 
 
+
 // Валидация формы
 
 function validate (event){
