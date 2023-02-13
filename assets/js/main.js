@@ -67,5 +67,4 @@ const myForm = document.getElementById( 'contactform' );
 
 
 
-
 myForm.addEventListener( 'submit', validate);
