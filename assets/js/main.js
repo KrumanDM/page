@@ -63,7 +63,6 @@ function validate (event){
 	return valid;
 }
 
-
 const myForm = document.getElementById( 'contactform' );
 
 
