@@ -38,6 +38,8 @@ function validate (event){
 	if ( ! nameField.value || nameField.value.length < 3 ){
       errorContainer.innerHTML += '<p style="color:red"> Поле имени ни разу не ок</p>';
 	valid = false;
+	} else {
+		localStorage.setItem("name", nameField.value);
 	}
 
 	//Проверка email
