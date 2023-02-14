@@ -49,6 +49,8 @@ function validate (event){
 	if ( ! emailField.value || ! re.test(String(emailField.value).toLowerCase()) ){
       errorContainer.innerHTML += '<p style="color:red"> Ваш email не заполнен или не корректен</p>';
 	valid = false;
+	} else {
+		localStorage.setItem("email", emailField.value);
 	}
 
 	//Проверка сообщений
@@ -73,7 +75,12 @@ myForm.addEventListener( 'submit', validate);
 
 
 // Выводим данные в форму
-
 const nameField = document.getElementById( 'name' );
-const userName = localStorage.setItem("name", nameField.value);
+const userName = localStorage.getItem("name");
+nameField.value = userName;
+
+
+const emailField = document.getElementById( 'email' );
+const userEmail = localStorage.getItem("email");
+emailField.value = userEmail;
 
