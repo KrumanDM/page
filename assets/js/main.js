@@ -84,6 +84,12 @@ myForm.addEventListener( 'submit', validate);
 
 
 // Выводим данные в форму
+const contactFormData = JSON.parse( localStorage.getItem('contctformdata'));
+      nameField = document.getElementById ('name'),
+	  emailField = document.getElementById ('email');
+
+nameField.value = contactFormData.name;
+emailField.value = contactFormData.email;
 // const nameField = document.getElementById( 'name' );
 // const userName = localStorage.getItem("name");
 // nameField.value = userName;
