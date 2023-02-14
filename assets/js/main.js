@@ -70,3 +70,10 @@ const myForm = document.getElementById( 'contactform' );
 
 
 myForm.addEventListener( 'submit', validate);
+
+
+// Выводим данные в форму
+
+const nameField = document.getElementById( 'name' );
+const userName = localStorage.setItem("name", nameField.value);
+
