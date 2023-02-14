@@ -30,6 +30,10 @@ function validate (event){
     // Очищаем все ошибки перед новой валидацией формы
 	errorContainer.innerHTML = '';
     
+    const contactFormData = {
+		name: '',
+		email: ''
+	}
 
 	let valid = true;
     
@@ -39,7 +43,8 @@ function validate (event){
       errorContainer.innerHTML += '<p style="color:red"> Поле имени ни разу не ок</p>';
 	valid = false;
 	} else {
-		localStorage.setItem("name", nameField.value);
+		contactFormData.name = nameField.value;
+		
 	}
 
 	//Проверка email
@@ -50,7 +55,7 @@ function validate (event){
       errorContainer.innerHTML += '<p style="color:red"> Ваш email не заполнен или не корректен</p>';
 	valid = false;
 	} else {
-		localStorage.setItem("email", emailField.value);
+		contactFormData.email = emailField.value;
 	}
 
 	//Проверка сообщений
@@ -59,6 +64,10 @@ function validate (event){
       errorContainer.innerHTML += '<p style="color:red"> Поле сообщения не заполнено</p>';
 	valid = false;
 	}
+
+
+	//Сохраняем в локал сторадж
+    localStorage.setItem('contactformdata', JSON.stringify( contactFormData ));
 
 	// Если была хотя бы одна ошибка
 	if ( false === valid ) {
@@ -75,12 +84,12 @@ myForm.addEventListener( 'submit', validate);
 
 
 // Выводим данные в форму
-const nameField = document.getElementById( 'name' );
-const userName = localStorage.getItem("name");
-nameField.value = userName;
+// const nameField = document.getElementById( 'name' );
+// const userName = localStorage.getItem("name");
+// nameField.value = userName;
 
 
-const emailField = document.getElementById( 'email' );
-const userEmail = localStorage.getItem("email");
-emailField.value = userEmail;
+// const emailField = document.getElementById( 'email' );
+// const userEmail = localStorage.getItem("email");
+// emailField.value = userEmail;
 
